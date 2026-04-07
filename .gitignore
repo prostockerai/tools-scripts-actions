@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
