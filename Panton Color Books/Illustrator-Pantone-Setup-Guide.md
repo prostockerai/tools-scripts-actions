@@ -46,7 +46,7 @@ Pantone একটি standard color system যা exact color, print consistency
 
 ## 🎥 Video Guide
 ---
-[![Watch Video](images/video-thumbnail.png)](https://github.com/prostockerai/tools-scripts-actions/blob/main/Panton%20Color%20Books/Color%20Books%20User%20manual.mp4)
+Please Download this  Video "Color Books User guid.mp4"
 ---
 
 
