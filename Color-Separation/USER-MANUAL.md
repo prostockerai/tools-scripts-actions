@@ -141,6 +141,6 @@ File → Scripts → ColorSep Pro
 
 ## 🎥 Video Guide
 
-👉 [Watch Setup & Demo Video](YOUR_VIDEO_LINK_HERE)
+👉 ColorSep Pro_ User Guide.mp4
 
 ---
