@@ -1,0 +1,58 @@
+python VectorizerPro.py
+
+Note: যে Folder এ  ফাইল গুল আসে অই Folder এ Right Click  করে Open in Terminal  এ click করে python VectorizerPro.py টি দিয়ে Enter চাপুন। 
+
+=========================================================
+
+Vectorizer.AI অটোমেশন স্ক্রিপ্ট
+
+এই স্ক্রিপ্টটি আপনার কম্পিউটারের একটি ফোল্ডার থেকে JPG, JPEG, এবং PNG ফাইলগুলো স্বয়ংক্রিয়ভাবে Vectorizer.AI ওয়েবসাইটে আপলোড করবে, সেগুলোকে EPS ফরম্যাটে প্রসেস করবে এবং আপনার নির্দিষ্ট ফোল্ডারে ডাউনলোড করবে। সমস্ত ধাপ একসাথে VectorizerPro.py ফাইলে আছে। 
+
+প্রয়োজনীয়তা:
+1. Python 3.8 বা তার নতুন সংস্করণ
+2. Playwright লাইব্রেরি (python -m pip install playwright)
+3. Vectorizer.AI অ্যাকাউন্ট (https://vectorizer.ai/) (Must Premium Account)
+
+ধাপ ১: নতুন কম্পিউটারে সেটআপ
+- Python ইনস্টল করুন (Add Python to PATH সিলেক্ট করুন)
+- প্রজেক্ট ফোল্ডার তৈরি করুন উদাহরণ: E:\Vectorizer-Pro
+   ├── input\ (JPG, JPEG, PNG ফাইল)
+   ├── output\ (EPS ফাইল সংরক্ষণের জন্য)
+   └── VectorizerPro.py
+
+- PowerShell/টার্মিনালে চালান:
+
+    pip install playwright
+    python -m playwright install
+
+
+ধাপ ২: VectorizerPro.py ফাইল
+- এই ফাইলটি প্রজেক্ট ফোল্ডারে রাখুন।
+- session.json না থাকলে স্ক্রিপ্ট ব্রাউজার খুলবে এবং ম্যানুয়ালি লগইন করতে বলবে। 
+
+ধাপ ৩: স্ক্রিপ্ট চালানো
+- PowerShell/টার্মিনালে লিখুন:
+
+    python VectorizerPro.py
+
+- প্রথমবার: ব্রাউজারে লগইন করুন এবং ব্রাউজার বন্ধ করুন
+- এরপর স্ক্রিপ্ট স্বয়ংক্রিয়ভাবে ইনপুট ফাইল EPS-এ রূপান্তর করবে এবং output ফোল্ডারে সংরক্ষণ করবে। 
+
+ধাপ ৪: নোট
+- প্রথমবার সেশন সংরক্ষণ বাধ্যতামূলক। session এর জন্য Username & Password must লাগবে।
+- Input ফোল্ডার খালি থাকলে বা session.json না থাকলে চলবে না
+- সর্বশেষ ব্রাউজার ও Playwright আপডেট রাখুন
+- Vectorizer.AI ওয়েবসাইট: https://vectorizer.ai/
+
+Developer: Mostafizar Rahman
+Telegram: https://t.me/mostafizarfiz
+
+
+---------------------------------------------
+
+
+fixgraphixstudio@gmail.com
+
+q3042hstlhbt459
+
+

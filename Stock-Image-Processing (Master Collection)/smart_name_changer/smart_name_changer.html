@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>Smart Name Changer — User Manual</title>
+<style>
+/* General body */
+body { 
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    margin: 0; 
+    background: #e3f2fd; /* Light blue background */
+    color: #333; 
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Header */
+h1 {
+    color: #0d47a1; 
+    text-align: center; 
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #1976d2; 
+    margin-top: 20px;
+}
+
+h3 {
+    color: #1565c0;
+}
+
+a { 
+    color: #0d47a1; 
+    text-decoration: none; 
+}
+a:hover { text-decoration: underline; }
+
+/* Code block */
+.code-block { 
+    background: #272822; 
+    color: #f8f8f2; 
+    padding: 10px 15px; 
+    border-radius: 6px; 
+    font-family: "Courier New", monospace; 
+    overflow-x: auto; 
+    white-space: pre-wrap; 
+    margin: 10px 0; 
+    border-left: 4px solid #0d47a1;
+}
+
+/* Highlight */
+.highlight { 
+    font-weight: bold; 
+    color: #e74c3c; 
+}
+
+/* Section */
+.section { 
+    border: 1px solid #ddd; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
+}
+
+/* Lists */
+ul { margin-left: 20px; }
+ol { margin-left: 20px; }
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 15px 0;
+    background: #0d47a1;
+    border-radius: 0 0 10px 10px;
+    margin-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>📘 Smart Name Changer — User Manual</h1>
+<p style="text-align:center;">
+<strong>Version:</strong> 1.0<br>
+<strong>Developed by:</strong> Md. Mostafizar Rahman • Contact: <a href="https://t.me/mostafizarfiz" target="_blank">Telegram: @mostafizarfiz</a>
+</p>
+
+
+
+
+
+
+<div style="
+  margin: 15px 20px;
+  padding: 14px;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  animation: slideDown 0.6s ease;
+">
+
+  <span style="
+    background:#fff;
+    color:#ee0979;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:13px;
+    margin-right:8px;
+    font-weight:bold;
+  ">
+    NEW
+  </span>
+
+  🚀 Online Tool Available Now! 
+  <a href="https://renamy.netlify.app" target="_blank"
+     style="
+       color:#fff;
+       text-decoration: underline;
+       font-weight: bold;
+       margin-left:5px;
+     ">
+     Try Renamy
+  </a>
+
+  <style>
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity:0; }
+      to { transform: translateY(0); opacity:1; }
+    }
+  </style>
+
+</div>
+
+
+
+
+<div class="section">
+<h2>🔰 Overview</h2>
+<ul>
+<li>CSV পড়বে এবং প্রতিটি রো অনুযায়ী ইমেজ ফাইলের নাম বদলাবে (Filename → Title ভিত্তিক)।</li>
+<li>Windows-এর illegal character গুলো (<>:"/\|?*) নাম থেকে সরিয়ে দেবে এবং ".." কে "_" করবে।</li>
+<li>ফোল্ডারের আসল ফাইলের extension আগের মতই থাকবে (.jpg/.png), তবে CSV এর <strong>“New Filename”</strong> কলামে .eps লেখা থাকবে।</li>
+<li>Progress bar দেখাবে এবং শেষে summary দেবে।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🧩 Requirements</h2>
+<ul>
+<li>Windows 10/11</li>
+<li>Python 3.9+ (Tkinter সাধারণত ডিফল্টে থাকে)</li>
+<li>pandas প্যাকেজ<br>
+<div class="code-block">pip install pandas</div>
+</li>
+<li>CSV ফাইলে কমপক্ষে এই কলামগুলো থাকতে হবে:<br>
+<ul>
+<li>Filename  (উদাহরণ: image_01.jpg)</li>
+<li>Title     (উদাহরণ: Modern Flat Icon Set)</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>📁 CSV Format (Example)</h2>
+<div class="code-block">
+Filename,Title
+image_01.jpg,Modern Flat Icon Set
+image_02.png,Minimal Line Icons
+</div>
+<p>➡ রান করার পরে স্ক্রিপ্ট CSV-তে একটি নতুন কলাম যোগ করবে: <strong>New Filename</strong> (Title থেকে জেনারেট করা নাম + .eps)</p>
+</div>
+
+<div class="section">
+<h2>⚙️ How to Run</h2>
+<ol>
+<li>স্ক্রিপ্ট ফাইল (<strong>smart_name_changer.py</strong>) এবং আপনার CSV/ইমেজ ফোল্ডার প্রস্তুত রাখুন।</li>
+<li>স্ক্রিপ্ট চালান:
+<ul>
+<li>ডাবল ক্লিক (যদি .py ফাইল Python এর সাথে অ্যাসোসিয়েটেড থাকে), অথবা</li>
+<li>Command Prompt / PowerShell থেকে:<br>
+<div class="code-block">python smart_name_changer.py</div>
+</li>
+</ul>
+</li>
+<li>অ্যাপ খুললে:
+<ul>
+<li>“Select Image Folder” → ইমেজ ফোল্ডার সিলেক্ট করুন।</li>
+<li>“Select CSV File” → CSV ফাইল সিলেক্ট করুন।</li>
+<li>“Change Names” বাটনে ক্লিক করুন।</li>
+</ul>
+</li>
+<li>অ্যাপ CSV লোড করবে, ফাইল rename করবে এবং CSV আপডেট করবে। Progress bar দেখাবে এবং শেষে success message দিবে।</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>🧠 Naming Rules</h2>
+<ul>
+<li>Illegal characters সরানো হবে:  <>:"/\|?*</li>
+<li>".." → "_" এ রূপান্তর হবে।</li>
+<li>ফোল্ডারের ফাইলের আসল extension বজায় থাকবে।</li>
+<li>CSV-র “New Filename” কলাম সবসময় .eps দিয়ে শেষ হবে।</li>
+</ul>
+<div class="code-block">
+// উদাহরণ
+Title: Modern: Flat/Icon..Set?
+Sanitized: Modern FlatIcon_Set
+Physical file: Modern FlatIcon_Set.jpg
+CSV [New Filename]: Modern FlatIcon_Set.eps
+</div>
+</div>
+
+<div class="section">
+<h2>✅ Best Practices</h2>
+<ul>
+<li>Title গুলো ইউনিক রাখুন।</li>
+<li>CSV এর Filename কলামে ফোল্ডারের ফাইলের নামের সাথে ১০০% মিল থাকতে হবে।</li>
+<li>CSV UTF-8 এ সেভ করুন।</li>
+<li>রান করার আগে ইমেজ ফোল্ডারের ব্যাকআপ রাখুন।</li>
+<li>বড় ব্যাচে রান করার আগে ২–৩ ফাইলে টেস্ট করুন।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🛠️ Troubleshooting</h2>
+<ul>
+<li>“Please select a valid image folder.” → ফোল্ডার চেক করুন।</li>
+<li>“Please select a valid CSV file.” → CSV path সঠিক কিনা চেক করুন।</li>
+<li>“The file 'xxx' could not be found...” → Filename এবং ফোল্ডারের নাম মিল কিনা চেক করুন।</li>
+<li>PermissionError → ফাইল অন্য প্রোগ্রামে খোলা নেই কিনা চেক করুন।</li>
+<li>Unicode/Encoding Error → CSV UTF-8 format এ সেভ করুন।</li>
+<li>Duplicate Title → Title ইউনিক করুন বা শেষে -1/-2 যোগ করুন।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🧪 Verification</h2>
+<ul>
+<li>ফোল্ডারের ফাইলগুলোর নাম Title ভিত্তিক নতুন নামে দেখা যাবে।</li>
+<li>CSV-তে “New Filename” কলাম তৈরি হবে এবং সেখানে .eps নাম থাকবে।</li>
+<li>অ্যাপে success message দেখাবে।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>📦 Optional: Make EXE (PyInstaller)</h2>
+<div class="code-block">
+pip install pyinstaller
+pyinstaller --onefile --name "Smart Name Changer" smart_name_changer.py
+</div>
+<p>অথবা লগ দরকার না হলে <code>--noconsole</code> ব্যবহার করুন। .exe তৈরি হবে dist/ ফোল্ডারে।</p>
+</div>
+
+<div class="section">
+<h2>❓ FAQ</h2>
+<ul>
+<li>CSV-র “New Filename” কেন .eps? → Vector workflow জন্য। Physical file extension আগের মতো থাকে।</li>
+<li>একই Title থাকলে কী হবে? → Title ইউনিক করুন, প্রয়োজনে "-01", "-02" যোগ করুন।</li>
+<li>Notepad-এ লিংক ক্লিক হয় না? → Notepad++/VS Code/Browser/Word ব্যবহার করুন। Local file path হলে <code>file:///C:/path</code> ফরম্যাট ব্যবহার করুন।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>📝 Notes</h2>
+<ul>
+<li>“last used path remember” feature নেই।</li>
+<li>Runtime error হলে process stop হবে, fixed করে পুনরায় রান করুন।</li>
+<li>বড় প্রোজেক্টে চালানোর আগে সবসময় ব্যাকআপ নিন।</li>
+
+</ul>
+</div>
+
+
+<div style="
+  margin: 25px;
+  padding: 18px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  text-align: center;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+">
+
+  <div style="margin-bottom:10px; font-size:17px;">
+    🌐 Online থেকে ও File Name Change করতে পারবেনঃ
+  </div>
+
+  <a href="https://renamy.netlify.app" target="_blank"
+     style="
+       display:inline-block;
+       background:#ffffff;
+       color:#2c5364;
+       padding:10px 18px;
+       border-radius:8px;
+       font-weight:600;
+       text-decoration:none;
+       font-size:15px;
+       box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+       transition: all 0.25s ease;
+     "
+     onmouseover="this.style.background='#00c6ff'; this.style.color='#fff'; this.style.transform='translateY(-2px)'"
+     onmouseout="this.style.background='#ffffff'; this.style.color='#2c5364'; this.style.transform='translateY(0)'"
+  >
+    🔗 Open Renamy Tool
+  </a>
+
+</div>
+
+
+
+
+<div class="footer">
+Developed by Md. Mostafizar Rahman • <a href="https://t.me/mostafizarfiz" target="_blank" style="color:#fff;">Telegram: @mostafizarfiz</a>
+</div>
+
+</body>
+</html>

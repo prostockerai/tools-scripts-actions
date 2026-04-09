@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>Vectorizer Pro — User Manual</title>
+<style>
+body { font-family: Arial, sans-serif; background: #e3f2fd; color: #333; line-height: 1.6; margin: 0; }
+.container { width: 90%; max-width: 900px; margin: 30px auto; background: #fff; padding: 25px 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+h1, h2, h3 { color: #0d47a1; }
+h1 { text-align: center; margin-bottom: 5px; }
+h2 { margin-top: 25px; }
+h3 { color: #1565c0; }
+ul, ol { margin-left: 20px; }
+a { color: #0d47a1; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.code-block { background: #272822; color: #f8f8f2; padding: 10px 15px; border-radius: 6px; font-family: "Courier New", monospace; overflow-x: auto; margin: 10px 0; border-left: 4px solid #0d47a1; }
+.section { margin-bottom: 20px; padding: 20px; background: #f9f9f9; border-radius: 8px; border: 1px solid #ddd; }
+.footer { text-align: center; padding: 15px 0; background: #0d47a1; color: #fff; border-radius: 0 0 10px 10px; margin-top: 30px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📘 Vectorizer Pro — User Manual</h1>
+<p style="text-align:center;"><strong>Version:</strong> 1.0<br>
+<strong>Developed by:</strong> Mostafizar Rahman • Contact: <a href="https://t.me/mostafizarfiz" target="_blank">Telegram: @mostafizarfiz</a></p>
+
+<div class="section">
+<h2>🔰 Overview</h2>
+<p>Vectorizer Pro একটি অটোমেশন টুল যা আপনার কম্পিউটারের <strong>input ফোল্ডার</strong> থেকে JPG, JPEG, PNG ফাইলগুলো নিয়ে স্বয়ংক্রিয়ভাবে <a href="https://vectorizer.ai/" target="_blank">Vectorizer.AI</a> ওয়েবসাইটে আপলোড করে EPS ফাইল আকারে <strong>output ফোল্ডারে</strong> ডাউনলোড করে।</p>
+<ul>
+<li>Input ফোল্ডারে থাকা সমস্ত ইমেজ প্রসেস করা হবে।</li>
+<li>Browser session একবার সংরক্ষণ করলে পুনরায় লগইন দরকার হবে না।</li>
+<li>Progress bar এবং live status label দিয়ে কাজের অবস্থা দেখাবে।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🧩 Requirements</h2>
+<ul>
+<li>Windows 10/11 বা নতুন</li>
+<li>Python 3.8+</li>
+<li>Playwright লাইব্রেরি: <code>python -m pip install playwright</code> এবং <code>python -m playwright install</code></li>
+<li>Vectorizer.AI Premium অ্যাকাউন্ট</li>
+<li>Internet connection</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>📁 Folder Structure</h2>
+<p>প্রজেক্ট ফোল্ডার উদাহরণ:</p>
+<div class="code-block">
+<pre>
+<code>
+E:\Vectorizer-Pro\
+    ├── input\        (JPG, JPEG, PNG ফাইল)
+    ├── output\       (EPS ফাইল সংরক্ষণের জন্য)
+    ├── VectorizerPro.py
+    └── session.json  (First Time Run করলে Automatic Create হবে)
+</code>
+</pre>
+</div>
+</div>
+
+
+<div class="section">
+<h2>⚙️ Setup Steps</h2>
+<ol>
+<li>Python ইনস্টল করুন এবং "Add Python to PATH" সিলেক্ট করুন।</li>
+<li>প্রজেক্ট ফোল্ডার তৈরি করুন এবং input/output ফোল্ডার তৈরি করুন।</li>
+<li>Playwright ইনস্টল করুন এবং browser binaries ইনস্টল করুন:
+<div class="code-block">
+pip install playwright
+python -m playwright install
+</div>
+</li>
+<li>VectorizerPro.py ফাইল ফোল্ডারে রাখুন।</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>🚀 How to Use</h2>
+<ol>
+<li>PowerShell/Terminal খুলুন এবং প্রজেক্ট ফোল্ডারে যান।</li>
+<li>স্ক্রিপ্ট চালান:
+<div class="code-block">python VectorizerPro.py</div>
+</li>
+<li>প্রথমবার session সংরক্ষণ:
+<ul>
+<li>"1. Save Session" বাটনে ক্লিক করুন।</li>
+<li>Browser খুলবে। আপনার Vectorizer.AI অ্যাকাউন্টে লগইন করুন।</li>
+<li>লগইন শেষে browser বন্ধ করুন। session.json ফাইল তৈরি হবে।</li>
+</ul>
+</li>
+<li>Input ফোল্ডারে ইমেজ রাখুন।</li>
+<li>"2. Process Images" বাটনে ক্লিক করুন। স্ক্রিপ্ট সব ইমেজ EPS এ প্রসেস করে output ফোল্ডারে সংরক্ষণ করবে।</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>📝 Notes & Tips</h2>
+<ul>
+<li>Input ফোল্ডার খালি থাকলে বা session.json না থাকলে কাজ করবে না।</li>
+<li>Session সংরক্ষণ একবার করতে হবে।</li>
+<li>EPS ফাইল ডাউনলোডের সময় browser visible থাকবে।</li>
+<li>বড় batch এর আগে কয়েকটি ফাইল দিয়ে টেস্ট করুন।</li>
+<li>সবসময় input ফোল্ডারের ব্যাকআপ রাখুন।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🛠️ Troubleshooting</h2>
+<ul>
+<li>Browser open হচ্ছে না → Playwright সঠিকভাবে ইনস্টল হয়েছে কিনা চেক করুন।</li>
+<li>Session file not found → "Save Session" বাটন ক্লিক করুন।</li>
+<li>Input/Output ফোল্ডার নেই → সঠিক ফোল্ডার সিলেক্ট করুন।</li>
+<li>Download fail → Internet এবং Vectorizer.AI Premium account চেক করুন।</li>
+<li>PermissionError → ফাইল অন্য প্রোগ্রামে খোলা নেই কিনা চেক করুন।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>❓ FAQ</h2>
+<ul>
+<li>একই নামের ছবি আছে, কী হবে? → Output ফোল্ডারে duplicate হলে browser auto rename করতে পারে।</li>
+<li>EPS ফাইল কোথায় সংরক্ষিত হবে? → Output ফোল্ডারে।</li>
+<li>কত ছবি একবারে প্রসেস করা যাবে? → কম্পিউটার resources অনুযায়ী।</li>
+</ul>
+</div>
+
+<div class="footer">
+© 2025 Vectorizer Pro. Developed by Mostafizar Rahman • <a href="https://t.me/mostafizarfiz" target="_blank" style="color:#fff;">Telegram: @mostafizarfiz</a>
+</div>
+</div>
+</body>
+</html>

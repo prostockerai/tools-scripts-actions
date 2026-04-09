@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Playwright Install Guide (Bangla)</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #0b1020, #121b33); color: #e8ecf8; margin: 0; padding: 50px 20px; display: flex; justify-content: center; }
+    .container { max-width: 700px; width: 100%; text-align: center; }
+    h1 { font-size: 32px; margin-bottom: 20px; letter-spacing: 1px; color: #6aa2ff; }
+    p { color: #b8c0dd; font-size: 16px; line-height: 1.8; }
+    .codebox { position: relative; background: #111831; border: 1px solid #22305f; border-radius: 15px; padding: 20px; margin: 20px 0; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+    pre { margin: 0; font-family: 'Courier New', Courier, monospace; color: #dfe6ff; font-size: 15px; }
+    button.copy { position: absolute; top: 10px; right: 10px; border: none; background: #3350a0; color: #fff; padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 13px; transition: all 0.2s; }
+    button.copy:hover { background: #6aa2ff; }
+    .step { font-size: 18px; font-weight: 600; color: #3ccf91; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Playwright ইনস্টল করার ধাপসমূহ</h1>
+
+    <div class="step">Step ১: Playwright ইনস্টল করো</div>
+    <p>PowerShell এ লিখো:</p>
+    <div class="codebox"><button class="copy" data-copy="c1">Copy</button><pre id="c1">pip install playwright</pre></div>
+
+    <p>(যদি তোমার একাধিক Python version থাকে তবে ব্যবহার করো)</p>
+    <div class="codebox"><button class="copy" data-copy="c2">Copy</button><pre id="c2">python -m pip install playwright</pre></div>
+
+    <div class="step">Step ২: Playwright browsers install করো</div>
+    <p>(এটা প্রয়োজন হয়)</p>
+    <div class="codebox"><button class="copy" data-copy="c3">Copy</button><pre id="c3">playwright install</pre></div>
+
+    <p>অথবা যদি permission সমস্যা হয় তবে:</p>
+    <div class="codebox"><button class="copy" data-copy="c4">Copy</button><pre id="c4">python -m playwright install</pre></div>
+
+    <div class="step">Step ৩: স্ক্রিপ্ট চালাও</div>
+    <div class="codebox"><button class="copy" data-copy="c5">Copy</button><pre id="c5">python VectorizerPro.py</pre></div>
+
+    <p>👉 অনেক সময় Windows এ <code>pip</code> আলাদা Python ভার্সনে install করে।<br>
+    তুমি confirm করতে পারো কোন Python এ ইনস্টল হচ্ছে এই কমান্ড দিয়ে:</p>
+    <div class="codebox"><button class="copy" data-copy="c6">Copy</button><pre id="c6">python -m pip --version</pre></div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('button.copy').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const id = btn.getAttribute('data-copy');
+        const text = document.getElementById(id).innerText;
+        try {
+          await navigator.clipboard.writeText(text);
+          btn.textContent = 'Copied!';
+          setTimeout(()=>btn.textContent='Copy', 1200);
+        } catch(e) {
+          alert('Copy failed: ' + e);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

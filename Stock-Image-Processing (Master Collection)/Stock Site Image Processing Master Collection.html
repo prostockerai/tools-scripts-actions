@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>Stock Site Image Processing Master Collection — User Manual</title>
+<style>
+/* General Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background: #e3f2fd; /* Light blue background */
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Header */
+h1 {
+    color: #0d47a1;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #1976d2;
+    margin-top: 20px;
+}
+
+h3 {
+    color: #1565c0;
+}
+
+a {
+    color: #0d47a1;
+    text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* Code block */
+.code-block {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-family: "Courier New", monospace;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    margin: 10px 0;
+    border-left: 4px solid #0d47a1;
+}
+
+/* Highlight */
+.highlight {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Section */
+.section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Lists */
+ul { margin-left: 20px; }
+ol { margin-left: 20px; }
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 15px 0;
+    background: #0d47a1;
+    border-radius: 0 0 10px 10px;
+    margin-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>📘 Stock Site Image Processing Master Collection</h1>
+<p style="text-align:center;">
+<strong>User Manual</strong>
+<br>
+<strong>Developed by:</strong> Md. Mostafizar Rahman • Contact: <a href="https://t.me/mostafizarfiz" target="_blank">Telegram: @mostafizarfiz</a>
+</p>
+
+<div class="section">
+<h2>🎯 গাইডলাইন</h2>
+<p>এই ম্যানুয়ালটি স্টক সাইটে ইমেজ আপলোড করার জন্য একটি সম্পূর্ণ প্রসেসিং ওয়ার্কফ্লো বর্ণনা করে। এটি ধাপে ধাপে AI টুলস থেকে শুরু করে ফাইল প্রক্রিয়াকরণ এবং আপলোড পর্যন্ত সব কিছু নির্দেশনা দেয়।</p>
+</div>
+
+<div class="section">
+<h2>🔹 প্রথম ধাপ: ইমেজ তৈরি</h2>
+<ul class="list">
+    <li>Gemini, Leonardo, Recraft-এর মতো AI টুলস ব্যবহার করে ইমেজ তৈরি করুন।</li>
+    <li>ইমেজগুলোর নাম প্রফেশনাল করার জন্য পরিবর্তন করতে হবে।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🔹 দ্বিতীয় ধাপ: মেটাডেটা ও CSV তৈরি</h2>
+<ul class="list">
+    <li><a href="https://prostockerai.netlify.app/" target="_blank" rel="noopener">prostockerai.netlify.app</a> সাইটে গিয়ে ইমেজ ফোল্ডারটি সিলেক্ট করুন।</li>
+    <li>ইমেজের জন্য **Title**, **Description** এবং **Keyword** তৈরি করুন।</li>
+    <li>তারপর **CSV** ফাইলটি ডাউনলোড করুন।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🔹 তৃতীয় ধাপ: ফাইলের নাম পরিবর্তন (<span class="code">smart_name_changer.py</span>)</h2>
+<p>এই স্ক্রিপ্টটি দিয়ে আপনার ইমেজগুলোর নাম পরিবর্তন করতে হবে।</p>
+<ul class="list">
+    <li>স্ক্রিপ্টটি CSV ফাইল থেকে **"Title"** কলামের উপর ভিত্তি করে ফাইলগুলোর নাম SEO-বান্ধব করবে।</li>
+    <li>এটি Excel CSV ফাইলে **"New Filename"** নামে একটি নতুন কলাম তৈরি করবে।</li>
+    <li>এই স্ক্রিপ্ট ব্যবহারের জন্য **User Manual** দেখে নিন।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🔹 চতুর্থ ধাপ: ভেক্টরাইজ করা (<span class="code">VectorizerPro.py</span>)</h2>
+<p>এই ধাপে আমরা JPG/PNG ইমেজগুলোকে ভেক্টরে রূপান্তর করব।</p>
+<ul class="list">
+    <li><span class="code">VectorizerPro.py</span> টুলসটি ব্যবহার করে JPG ইমেজকে **EPS** বা Vector এ রূপান্তর করুন।</li>
+    <li>এই টুলসটি ব্যবহারের জন্য এর **User Manual** পড়ে নিন।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🔹 পঞ্চম ধাপ: অ্যাডোব ইলাস্ট্রেটরে কাজ</h2>
+<p>এই ধাপে Vector ফাইলগুলো Adobe Illustrator-এ ফাইনাল প্রসেসিং করতে হবে।</p>
+<ul class="list">
+    <li>EPS ফাইলগুলো Adobe Illustrator-এ ওপেন করে প্রয়োজনীয় সংশোধন করুন।</li>
+    <li>Icon সেটগুলো গ্রুপ করার জন্য ঐচ্ছিকভাবে <span class="code">AI_Group_by_Proximity.zip</span> টুলসটি ব্যবহার করতে পারেন।</li>
+    <li>Illustrator-এর **Action Panel**-এ <span class="code">"Expant and Divide.aia"</span> এবং <span class="code">"Auto Multi Save Script.aia"</span> এই অ্যাকশনগুলো সেটআপ করুন।</li>
+    <li>ফাইলগুলো একাধিক ফরম্যাটে সেভ করার জন্য <span class="code">"Auto Multi-Save Script.jsx"</span> স্ক্রিপ্টটি Adobe Illustrator-এর **Scripts** ফোল্ডারে রাখুন।</li>
+    <li>এই টুলসগুলো ব্যবহারের জন্য প্রতিটি স্ক্রিপ্টের **User Manual** অনুসরণ করুন।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🔹 ষষ্ঠ ধাপ: আপলোড ও জমা</h2>
+<ul class="list">
+    <li>ফাইল প্রসেসিং শেষ হওয়ার পর ফাইলগুলো স্টক সাইটে আপলোড করুন।</li>
+    <li>CSV ফাইলটি আপলোড করে আপনার কাজ জমা দিন।</li>
+</ul>
+</div>
+
+<div class="footer">
+Developed by Md. Mostafizar Rahman • <a href="https://t.me/mostafizarfiz" target="_blank" style="color:#fff;">Telegram: @mostafizarfiz</a>
+<p style="margin: 5px 0 0 0; font-size: 0.8em;">©2025 Stock Site Image Processing Master Collection</p>
+</div>
+
+</body>
+</html>

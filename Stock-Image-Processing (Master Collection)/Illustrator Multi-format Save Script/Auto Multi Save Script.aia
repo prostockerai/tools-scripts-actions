@@ -1,0 +1,53 @@
+/version 3
+/name [ 22
+	4175746f204d756c7469205361766520536372697074
+]
+/isOpen 1
+/actionCount 1
+/action-1 {
+	/name [ 8
+		416374696f6e2033
+	]
+	/keyIndex 0
+	/colorIndex 4
+	/isOpen 1
+	/eventCount 2
+	/event-1 {
+		/useRulersIn1stQuadrant 0
+		/internalName (adobe_selectAll)
+		/localizedName [ 10
+			53656c65637420416c6c
+		]
+		/isOpen 0
+		/isOn 1
+		/hasDialog 0
+		/parameterCount 0
+	}
+	/event-2 {
+		/useRulersIn1stQuadrant 0
+		/internalName (adobe_commandManager)
+		/localizedName [ 16
+			416363657373204d656e75204974656d
+		]
+		/isOpen 0
+		/isOn 1
+		/hasDialog 0
+		/parameterCount 2
+		/parameter-1 {
+			/key 1769238125
+			/showInPalette -1
+			/type (ustring)
+			/value [ 17
+				5f30303030303230444545444235363930
+			]
+		}
+		/parameter-2 {
+			/key 1818455661
+			/showInPalette -1
+			/type (ustring)
+			/value [ 22
+				4175746f204d756c74692d5361766520536372697074
+			]
+		}
+	}
+}

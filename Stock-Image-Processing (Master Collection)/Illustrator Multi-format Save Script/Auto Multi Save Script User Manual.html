@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>🎨 Illustrator Multi-format Save Script — User Manual</title>
+<style>
+body { font-family: Arial, sans-serif; background: #e3f2fd; color: #333; line-height: 1.6; margin: 0; }
+.container { width: 90%; max-width: 950px; margin: 30px auto; background: #fff; padding: 30px 35px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+h1, h2, h3 { color: #0d47a1; }
+h1 { text-align: center; margin-bottom: 10px; }
+h2 { margin-top: 30px; border-bottom: 2px solid #0d47a1; padding-bottom: 5px; }
+h3 { color: #1565c0; }
+ul, ol { margin-left: 20px; }
+a { color: #0d47a1; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.code-block { background: #272822; color: #f8f8f2; padding: 12px 15px; border-radius: 6px; font-family: "Courier New", monospace; overflow-x: auto; margin: 12px 0; border-left: 5px solid #0d47a1; }
+.section { margin-bottom: 25px; padding: 22px; background: #f9f9f9; border-radius: 10px; border: 1px solid #ddd; }
+.footer { text-align: center; padding: 18px 0; background: #0d47a1; color: #fff; border-radius: 0 0 12px 12px; margin-top: 35px; font-size: 0.95em; }
+.highlight { background-color: #dff9fb; padding: 3px 5px; border-radius: 4px; }
+.emoji { font-size: 18px; }
+.file-path { background-color: #e8f5e9; padding: 5px 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-family: "Courier New", monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🎨 Illustrator Multi-format Save Script — User Manual</h1>
+<p style="text-align:center;"><strong>Version:</strong> 1.0<br>
+<strong>Developed by:</strong> Mostafizar Rahman • Contact: <a href="https://t.me/mostafizarfiz" target="_blank">Telegram: @mostafizarfiz</a></p>
+
+<div class="section">
+<h2>🔰 Overview</h2>
+<p>এই স্ক্রিপ্টটি Illustrator এ ব্যবহার করা হয় একটি নতুন ডকুমেন্ট তৈরি, ডিজাইন স্কেল এবং Multi-format (JPG, PNG, AI, EPS 10) এ সেভ করার জন্য।</p>
+<ul>
+<li>নতুন ডকুমেন্টে ডিজাইনটি কেন্দ্রে বসানো হবে।</li>
+<li>JPG এর জন্য সাদা ব্যাকগ্রাউন্ড তৈরি হবে, PNG ট্রান্সপারেন্ট থাকবে।</li>
+<li>AI ও EPS 10 ফাইলও একই ডকুমেন্ট থেকে তৈরি হবে।</li>
+<li>Action ফাইলগুলো ব্যবহার করলে Object Expand & Divide করে ফাইনাল Multi-format ফাইলগুলো সেভ করা সহজ হবে।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🧩 Requirements</h2>
+<ul>
+<li>Windows 10/11 বা নতুন</li>
+<li>Adobe Illustrator 2025</li>
+<li>Illustrator Script: <span class="highlight">Auto Multi-Save Script.jsx</span></li>
+<li>Action ফাইল: <span class="highlight">Expant and Divide.aia</span> &amp; <span class="highlight">Auto Multi Save Script.aia</span></li>
+<li>Internet connection (Optional, যদি Online resources দরকার হয়)</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>📁 Folder & File Setup</h2>
+<p>Script এবং Action ফাইলগুলোর সঠিক লোকেশন:</p>
+<ul>
+<li>Script ফোল্ডারে স্ক্রিপ্ট রাখুন: 
+<div class="file-path">C:\Program Files\Adobe\Adobe Illustrator 2025\Presets\en_GB\Scripts\Auto Multi-Save Script.jsx</div>
+</li>
+<li>Action ফোল্ডারে Action ফাইল রাখুন:
+<div class="file-path">C:\Program Files\Adobe\Adobe Illustrator 2025\Presets\en_GB\Actions\Expant and Divide.aia</div>
+<div class="file-path">C:\Program Files\Adobe\Adobe Illustrator 2025\Presets\en_GB\Actions\Auto Multi Save Script.aia</div>
+</li>
+</ul>
+<p>ফোল্ডার স্ট্রাকচার ঠিক রাখলে স্ক্রিপ্ট ও Action seamless কাজ করবে।</p>
+</div>
+
+<div class="section">
+<h2>⚙️ How to Use</h2>
+<div class="section">
+
+<h3 class="emoji">🟢 Option 01 — Direct Script Run</h3>
+<ol>
+<li>Illustrator ওপেন করুন এবং আপনার ডিজাইন ফাইলটি <strong>Open</strong> করুন।</li>
+<li>ডিজাইনটি সিলেক্ট করুন।</li>
+<li>
+<strong>Run Script:</strong>  
+File &gt; Scripts &gt; Other Script… নির্বাচন করুন এবং <strong>Auto Multi-Save Script.jsx</strong> চালান।
+</li>
+<li>স্ক্রিপ্ট পপ-আপ উইন্ডো আসবে। এখানে করুন:
+  <ul>
+    <li><strong>Select Format(s):</strong> JPG, PNG, AI, EPS 10 নির্বাচন করুন।</li>
+    <li><strong>Document এবং Design Dimensions (px):</strong> প্রয়োজনীয় উচ্চতা ও প্রস্থ লিখুন।</li>
+    <li><strong>File Name:</strong> ফাইলের নাম লিখুন (ডিফল্ট: মূল ফাইলের নাম)।</li>
+    <li><strong>Save Folder:</strong> যেখানে ফাইল সেভ হবে তা নির্বাচন করুন।</li>
+  </ul>
+</li>
+<li><strong>Save</strong> বাটনে ক্লিক করুন। স্ক্রিপ্ট নির্বাচিত ফরম্যাটে ফাইলগুলো সেভ করবে। ✅</li>
+</ol>
+
+<h3 class="emoji">🟡 Option 02 — Using Action Panel + Script</h3>
+<ol>
+<li>Illustrator ওপেন করুন এবং আপনার ডিজাইন ফাইলটি লোড করুন।</li>
+<li>Action Panel খুলুন (Window &gt; Actions) এবং নিম্নোক্ত Action ফাইলগুলো লোড/Setup করুন:
+  <ul>
+    <li><strong>Expant and Divide.aia</strong> — ডিজাইনের Object গুলো Expand এবং Divide করবে।</li>
+    <li><strong>Auto Multi Save Script.aia</strong> — Multi-format ফাইল সেভের জন্য স্ক্রিপ্ট চালাবে।</li>
+  </ul>
+</li>
+<li>যদি ডিজাইনের Objectগুলোকে Expand বা Divide করা প্রয়োজন হয়, তবে <strong>Expant and Divide</strong> Action চালান।</li>
+<li>সবকিছু ঠিক থাকলে <strong>Auto Multi Save Script</strong> Action চালান।</li>
+<li>
+<strong>Save Folder Selection:</strong>  
+যদি কোনো ফোল্ডার নির্বাচিত না করা হয়, স্ক্রিপ্টটি স্বয়ংক্রিয়ভাবে Desktop-এ <strong>"AI_Exports"</strong> নামে একটি ফোল্ডার তৈরি করবে এবং সব ফাইল সেখানে সেভ হবে। ✅
+</li>
+<li>Action চালানোর পর, সব ফাইল নির্বাচিত ফরম্যাটে সেভ হয়ে যাবে।</li>
+</ol>
+
+</div>
+
+<div class="section">
+<h2>🧩 Action Panel Setup</h2>
+<p>Action ফাইলগুলো ব্যবহার করলে অনেক কাজ স্বয়ংক্রিয়ভাবে হবে।</p>
+<ul>
+<li><span class="highlight">Expant and Divide.aia</span> — ডিজাইনের ভিতরের Object গুলো Expand & Divide করে।</li>
+<li><span class="highlight">Auto Multi Save Script.aia</span> — স্ক্রিপ্ট রান করে Multi-format ফাইল সেভ করবে।</li>
+<li>Action Panel (Window &gt; Actions) খুলে প্রতিটি Action ইনস্টল করুন।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>📝 Notes & Tips</h2>
+<ul>
+<li>ডিফল্ট Save Folder পরবর্তীতে স্মরণ থাকবে।</li>
+<li>Design স্কেলিং পিক্সেল এক্স্যাক্ট হতে হবে যদি প্রিসাইস মাপ চান।</li>
+<li>Batch ফাইল প্রোসেস করার আগে কয়েকটি টেস্ট করুন।</li>
+<li>সবসময় মূল ডিজাইনের ব্যাকআপ রাখুন।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🛠️ Troubleshooting</h2>
+<ul>
+<li>EPS বা AI সেভ হচ্ছে না → Compatibility এবং Illustrator update চেক করুন।</li>
+<li>Action চালাচ্ছে না → Action ফাইল সঠিক ফোল্ডারে আছে কিনা চেক করুন।</li>
+<li>Script Error → Illustrator restart করুন এবং আবার চেষ্টা করুন।</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>❓ FAQ</h2>
+<ul>
+<li>একই নামের ফাইল? → Output ফোল্ডারে duplicate হলে auto rename হবে।</li>
+<li>EPS কোথায় সেভ হবে? → Save Folder-এ।</li>
+<li>কতগুলো একসাথে প্রসেস হবে? → System resource অনুযায়ী।</li>
+</ul>
+</div>
+
+<div class="footer">
+© 2025 Illustrator Multi-format Save Script. Developed by Mostafizar Rahman • <a href="https://t.me/mostafizarfiz" target="_blank" style="color:#fff;">Telegram: @mostafizarfiz</a>
+</div>
+</div>
+</body>
+</html>
