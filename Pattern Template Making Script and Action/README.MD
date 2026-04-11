@@ -117,7 +117,8 @@ C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
 
 **Preview:**
 
-![Final Design](./Creat%20Design%20and%20Arro%20Mark/Creat%20Design%20and%20set%20auto.gif)
+![Creat Design and Arrow Mark](./Creat%20Design%20and%20set%20auto.gif)
+
 
 **Run:**
 👉 Actions Panel → ▶ Play
@@ -186,5 +187,3 @@ Telegram: **@mostafizarfiz**
 
 ---
 
-চাও হলে আমি next step এ:
-👉 **GitHub cover banner + badge + thumbnail preview design** বানিয়ে দিতে পারি (pro level repo look 🔥)
