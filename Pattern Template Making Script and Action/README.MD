@@ -1,25 +1,21 @@
+Perfect — নিচে আমি তোমাকে **final GitHub README preview style** দেখাচ্ছি (exact যেটা তুমি চাইছো)।
+এটা copy করলে সরাসরি GitHub-এ সুন্দরভাবে render হবে 👇
+
+---
 
 # 📦 Illustrator Pattern Template Scripts
 
 Collection of custom **Adobe Illustrator scripts & actions** for automating pattern template workflows.
 
-⚡ **One-click system:**
-👉 Scripts background-এ থাকবে
-👉 Actions panel থেকে শুধু ▶ Play করলেই সব run হবে
+⚡ **One-click workflow:**
+👉 Scripts background-এ
+👉 Actions panel থেকে শুধু ▶ Play
 
 ---
 
 # 📥 Installation & Setup
 
-## 🔹 Step 1: Download Project
-
-* Download ZIP / Clone repository
-
----
-
-## 🔹 Step 2: Install Scripts (.jsx)
-
-সব `.jsx` file copy করে এখানে রাখো:
+## 🔹 Install Scripts (.jsx)
 
 ### 🪟 Windows
 
@@ -33,145 +29,109 @@ C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
 /Applications/Adobe Illustrator [version]/Presets.localized/en_GB/Scripts
 ```
 
-👉 তারপর Illustrator restart করো
+👉 Restart Illustrator
 
 ---
 
-## 🔹 Step 3: Install Actions (.aia)
+## 🔹 Install Actions (.aia)
 
 1. Open Illustrator
-2. Go → **Window → Actions**
-3. Click menu (☰)
-4. Click → **Load Actions...**
-5. Select `.aia` file
-
-✅ Done
+2. Window → Actions
+3. Menu (☰) → Load Actions
+4. Select `.aia`
 
 ---
 
-# ⚙️ How It Works (IMPORTANT)
-
-📌 System logic:
-
-* `.jsx` → backend script (manual run করার দরকার নাই)
-* `.aia` → script call করে internally
-
-👉 তাই user শুধু এটা করবে:
-
-```
-Actions Panel → Select Action → ▶ Play
-```
-
-❌ File → Scripts manually run করতে হবে না
-✅ সব automation action থেকেই হবে
-
----
-
-# 🔁 Workflow (Serial Order)
-
-👉 MUST follow order (1 → 6)
+# ⚙️ Workflow (Play from Actions Panel)
 
 ---
 
 ## 1️⃣ Pattern Alline Action
 
-📁 `Pattern Alline Action/`
+📁 Folder: `Pattern Alline Action/`
 
 **Preview:**
 
-![Pattern Alline Action](Pattern Template Making Script and Action/Pattern Alline Action/Pattern Alline Action.gif)
-
-**Setup:**
-
-* Load `.aia`
+![Pattern Alline](./Pattern%20Alline%20Action/Pattern%20Alline%20Action.gif)
 
 **Run:**
-👉 Actions panel → ▶ Play
+👉 Actions Panel → ▶ Play
 
 ---
 
 ## 2️⃣ Size Script
 
-📁 `Size Script/`
+📁 Folder: `Size Script/`
 
-**Setup:**
+**Preview:**
 
-* `.jsx` → Scripts folder
-* `.aia` → Actions panel
+![Size Script](./Size%20Script/Size%20Script.gif)
 
 **Run:**
-👉 Actions panel → ▶ Play
+👉 Actions Panel → ▶ Play
 
 ---
 
 ## 3️⃣ Bounding Box
 
-📁 `Bounding BoX/`
+📁 Folder: `Bounding BoX/`
 
-**Setup:**
+**Preview:**
 
-* `.jsx` → Scripts folder
-* `.aia` → Actions panel
+![Bounding Box](./Bounding%20BoX/Bounding%20BoX.gif)
 
 **Run:**
-👉 Actions panel → ▶ Play
+👉 Actions Panel → ▶ Play
 
 ---
 
 ## 4️⃣ Template Script (Nest Pattern)
 
-📁 `Template Script Nest Pattern/`
+📁 Folder: `Template Script Nest Pattern/`
 
-**Setup:**
+**Preview:**
 
-* `.jsx` → Scripts folder
-* `.aia` → Actions panel
+![Template Script](./Template%20Script%20Nest%20Pattern/template.gif)
 
 **Run:**
-👉 Actions panel → ▶ Play
+👉 Actions Panel → ▶ Play
 
 ---
 
 ## 5️⃣ Arrow Mark
 
-📁 `Arrow Mark/`
+📁 Folder: `Arrow Mark/`
 
 **Preview:**
 
 ![Arrow Mark](./Arrow%20Mark/arro%20mark.gif)
 
-**Setup:**
-
-* `.jsx` → Scripts folder
-* `.aia` → Actions panel
-
 **Run:**
-👉 Actions panel → ▶ Play
+👉 Actions Panel → ▶ Play
 
 ---
 
 ## 6️⃣ Creat Design and Arrow Mark
 
-📁 `Creat Design and Arro Mark/`
+📁 Folder: `Creat Design and Arro Mark/`
 
-**Setup:**
+**Preview:**
 
-* `.jsx` → Scripts folder
-* `.aia` → Actions panel
+![Final Design](./Creat%20Design%20and%20Arro%20Mark/Creat%20Design%20and%20set%20auto.gif)
 
 **Run:**
-👉 Actions panel → ▶ Play
+👉 Actions Panel → ▶ Play
 
 ---
 
 # 🔗 Workflow Logic
 
 ```
-1 → 2 → 3 → 4 → 5 → 6
+Align → Resize → Bounding → Template → Arrow → Final Output
 ```
 
-👉 সব step connected
-👉 একটার output next step use করে
+👉 সব step interconnected
+👉 একটার output পরেরটা use করে
 
 ---
 
@@ -190,12 +150,12 @@ Pattern Template Making Script and Action/
 
 ---
 
-# ⚠️ Important Notes
+# ⚠️ Notes
 
-* Illustrator restart না করলে script detect করবে না
 * Scripts manually run করার দরকার নাই
-* সব action থেকেই trigger হবে
+* সব action থেকেই run হবে
 * Object select থাকা লাগবে
+* Illustrator restart required
 
 ---
 
@@ -205,3 +165,26 @@ Telegram: **@mostafizarfiz**
 
 ---
 
+# 🔥 Bonus (Pro Look Tips)
+
+👉 চাইলে তুমি add করতে পারো:
+
+* ⭐ GitHub badge
+* 🎥 Full workflow GIF
+* 📸 Before/After comparison
+
+---
+
+## 🚀 Result
+
+👉 এই format use করলে তোমার repo দেখাবে:
+
+* Professional
+* Clean
+* Easy to use
+* Beginner friendly
+
+---
+
+চাও হলে আমি next step এ:
+👉 **GitHub cover banner + badge + thumbnail preview design** বানিয়ে দিতে পারি (pro level repo look 🔥)
