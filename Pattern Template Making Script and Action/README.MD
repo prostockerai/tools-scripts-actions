@@ -4,7 +4,9 @@
 Collection of custom **Adobe Illustrator scripts & actions** for automating pattern template workflows.
 
 ⚡ **One-click workflow:**
+
 👉 Scripts background-এ
+
 👉 Actions panel থেকে শুধু ▶ Play
 
 ---
