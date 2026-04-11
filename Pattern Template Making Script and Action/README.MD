@@ -77,6 +77,10 @@ Actions Panel → Select Action → ▶ Play
 
 📁 `Pattern Alline Action/`
 
+**Preview:**
+
+![Pattern Alline Action](Pattern Template Making Script and Action/Pattern Alline Action/Pattern Alline Action.gif)
+
 **Setup:**
 
 * Load `.aia`
@@ -201,5 +205,3 @@ Telegram: **@mostafizarfiz**
 
 ---
 
-If you want next level polish:
-আমি এটাকে **premium GitHub repo style (badges + icons + UI preview sections)** বানিয়ে দিতে পারি 👍
