@@ -71,6 +71,7 @@ Click ▶ Play button
 Use Case:
 
 Align pattern elements properly
+
 Prepare layout structure
 
 **Run:**
@@ -89,6 +90,7 @@ Prepare layout structure
 Use Case:
 
 Scale objects to required size
+
 Maintain consistency
 
 **Run:**
@@ -107,6 +109,7 @@ Maintain consistency
 Use Case:
 
 Create bounding area for layout control
+
 Prepare object for template
 
 **Run:**
@@ -125,6 +128,7 @@ Prepare object for template
 Use Case:
 
 Generate structured pattern template
+
 Arrange design automatically
 
 **Run:**
@@ -143,6 +147,7 @@ Arrange design automatically
 Use Case:
 
 Add directional arrows
+
 Create vertical guide lines
 
 **Run:**
@@ -161,8 +166,11 @@ Create vertical guide lines
 Use Case:
 
 Center main design automatically
+
 Apply vertical lines
+
 Generate arrow marks
+
 Final output ready
 
 **Run:**
