@@ -40,6 +40,22 @@ C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
 
 ---
 
+---
+⚙️ How to Use (Important)
+
+👉 এই system-এ সব script action-এর সাথে connected
+
+✔ Basic Workflow:
+Select your main design / artwork
+Open Actions Panel
+Select the required action
+Click ▶ Play button
+
+✅ No need to run scripts manually
+✅ Everything runs automatically via actions
+---
+
+
 # ⚙️ Workflow (Play from Actions Panel)
 
 ---
@@ -51,6 +67,11 @@ C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
 **Preview:**
 
 ![Pattern Alline](./Pattern%20Alline%20Action/Pattern%20Alline%20Action.gif)
+
+Use Case:
+
+Align pattern elements properly
+Prepare layout structure
 
 **Run:**
 👉 Actions Panel → ▶ Play
@@ -65,6 +86,11 @@ C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
 
 ![Size Script](./Size%20Script/Size%20Script.gif)
 
+Use Case:
+
+Scale objects to required size
+Maintain consistency
+
 **Run:**
 👉 Actions Panel → ▶ Play
 
@@ -77,6 +103,11 @@ C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
 **Preview:**
 
 ![Bounding Box](./Bounding%20BoX/Bounding%20BoX.gif)
+
+Use Case:
+
+Create bounding area for layout control
+Prepare object for template
 
 **Run:**
 👉 Actions Panel → ▶ Play
@@ -91,6 +122,11 @@ C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
 
 ![Template Script](./Template%20Script%20Nest%20Pattern/Template%20Script%20Nest%20Pattern.gif)
 
+Use Case:
+
+Generate structured pattern template
+Arrange design automatically
+
 **Run:**
 👉 Actions Panel → ▶ Play
 
@@ -104,6 +140,11 @@ C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
 
 ![Arrow Mark](./Arrow%20Mark/arro%20mark.gif)
 
+Use Case:
+
+Add directional arrows
+Create vertical guide lines
+
 **Run:**
 👉 Actions Panel → ▶ Play
 
@@ -116,6 +157,13 @@ C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
 **Preview:**
 
 ![Final Design](./Creat%20Design%20and%20Arrro%20Mark/Creat%20Design%20and%20set%20auto.gif)
+
+Use Case:
+
+Center main design automatically
+Apply vertical lines
+Generate arrow marks
+Final output ready
 
 **Run:**
 👉 Actions Panel → ▶ Play  
@@ -160,27 +208,6 @@ Pattern Template Making Script and Action/
 # 📬 Contact
 
 Telegram: **@mostafizarfiz**
-
----
-
-# 🔥 Bonus (Pro Look Tips)
-
-👉 চাইলে তুমি add করতে পারো:
-
-* ⭐ GitHub badge
-* 🎥 Full workflow GIF
-* 📸 Before/After comparison
-
----
-
-## 🚀 Result
-
-👉 এই format use করলে তোমার repo দেখাবে:
-
-* Professional
-* Clean
-* Easy to use
-* Beginner friendly
 
 ---
 
