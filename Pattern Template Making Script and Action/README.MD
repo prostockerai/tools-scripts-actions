@@ -1,141 +1,179 @@
-📦 Illustrator Pattern Template Scripts
 
-Collection of custom Adobe Illustrator scripts & actions for automating pattern template creation workflows.
+# 📦 Illustrator Pattern Template Scripts
 
-📥 Installation
-Download or clone this repository
-Copy .jsx files into Illustrator Scripts directory:
+Collection of custom **Adobe Illustrator scripts & actions** for automating pattern template workflows.
 
-MacOS
+⚡ **One-click system:**
+👉 Scripts background-এ থাকবে
+👉 Actions panel থেকে শুধু ▶ Play করলেই সব run হবে
 
-/Applications/Adobe Illustrator [version]/Presets.localized/en_GB/Scripts
+---
 
-Windows (64-bit)
+# 📥 Installation & Setup
 
+## 🔹 Step 1: Download Project
+
+* Download ZIP / Clone repository
+
+---
+
+## 🔹 Step 2: Install Scripts (.jsx)
+
+সব `.jsx` file copy করে এখানে রাখো:
+
+### 🪟 Windows
+
+```
 C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
-Restart Illustrator
-Run via:
-File → Scripts → [Script Name]
-⚙️ Action Workflow (Serial Order)
+```
 
-Follow this order from the Actions panel:
+### 🍎 MacOS
 
-1️⃣ Pattern Alline Action
+```
+/Applications/Adobe Illustrator [version]/Presets.localized/en_GB/Scripts
+```
 
-📁 Folder: Pattern Alline Action/
+👉 তারপর Illustrator restart করো
 
-Files:
+---
 
-Pattern Alline Action.aia
-Pattern Alline Action.gif
+## 🔹 Step 3: Install Actions (.aia)
 
-Description:
-Aligns pattern elements consistently across the template.
+1. Open Illustrator
+2. Go → **Window → Actions**
+3. Click menu (☰)
+4. Click → **Load Actions...**
+5. Select `.aia` file
 
-Usage:
+✅ Done
 
-Select objects
-Run action
-Automatically aligns elements based on preset rules
-2️⃣ Size Script
+---
 
-📁 Folder: Size Script/
+# ⚙️ How It Works (IMPORTANT)
 
-Files:
+📌 System logic:
 
-Size Script.jsx
-Size Script.aia
-Size Script.gif
+* `.jsx` → backend script (manual run করার দরকার নাই)
+* `.aia` → script call করে internally
 
-Description:
-Controls scaling and sizing of selected objects.
+👉 তাই user শুধু এটা করবে:
 
-Usage:
+```
+Actions Panel → Select Action → ▶ Play
+```
 
-Select object(s)
-Run:
-File → Scripts → Size Script.jsx
-Adjust size parameters
-3️⃣ Bounding Box
+❌ File → Scripts manually run করতে হবে না
+✅ সব automation action থেকেই হবে
 
-📁 Folder: Bounding BoX/
+---
 
-Files:
+# 🔁 Workflow (Serial Order)
 
-Bounding Box Script.jsx
-Bounding BoX.aia
-Bounding BoX.gif
+👉 MUST follow order (1 → 6)
 
-Description:
-Creates bounding boxes around selected artwork for layout control.
+---
 
-Usage:
+## 1️⃣ Pattern Alline Action
 
-Select objects
-Run script
-Bounding box is generated automatically
-4️⃣ Template Script (Nest Pattern)
+📁 `Pattern Alline Action/`
 
-📁 Folder: Template Script Nest Pattern/
+**Setup:**
 
-Files:
+* Load `.aia`
 
-Template Script Nest Pattern.jsx
-Template Script.aia
-Test Template.ai
+**Run:**
+👉 Actions panel → ▶ Play
 
-Description:
-Creates structured nested pattern templates.
+---
 
-Usage:
+## 2️⃣ Size Script
 
-Open template file or artwork
-Run script
-Automatically builds nested pattern layout
-5️⃣ Arrow Mark
+📁 `Size Script/`
 
-📁 Folder: Arrow Mark/
+**Setup:**
 
-Files:
+* `.jsx` → Scripts folder
+* `.aia` → Actions panel
 
-Arrow Mark.aia
-Vartical Line.jsx
-arro mark.gif
+**Run:**
+👉 Actions panel → ▶ Play
 
-Preview:
+---
 
-Description:
-Adds directional arrow marks and vertical guide lines.
+## 3️⃣ Bounding Box
 
-Usage:
+📁 `Bounding BoX/`
 
-Select object or path
-Run action/script
-Arrow marks + vertical alignment lines will be created
-6️⃣ Creat Design and Arrow Mark
+**Setup:**
 
-📁 Folder: Creat Design and Arro Mark/
+* `.jsx` → Scripts folder
+* `.aia` → Actions panel
 
-Files:
+**Run:**
+👉 Actions panel → ▶ Play
 
-Creat Design and Arro Mark.aia
-Center Design on Selected Object.jsx
-Vertical Line All Object with 0.5...
-Creat Design and set auto.gif
+---
 
-Description:
-Final automation step combining:
+## 4️⃣ Template Script (Nest Pattern)
 
-Design placement
-Center alignment
-Arrow mark generation
+📁 `Template Script Nest Pattern/`
 
-Usage:
+**Setup:**
 
-Select main object
-Run action
-Full design + arrow workflow executes automatically
-📁 Folder Structure
+* `.jsx` → Scripts folder
+* `.aia` → Actions panel
+
+**Run:**
+👉 Actions panel → ▶ Play
+
+---
+
+## 5️⃣ Arrow Mark
+
+📁 `Arrow Mark/`
+
+**Preview:**
+
+![Arrow Mark](./Arrow%20Mark/arro%20mark.gif)
+
+**Setup:**
+
+* `.jsx` → Scripts folder
+* `.aia` → Actions panel
+
+**Run:**
+👉 Actions panel → ▶ Play
+
+---
+
+## 6️⃣ Creat Design and Arrow Mark
+
+📁 `Creat Design and Arro Mark/`
+
+**Setup:**
+
+* `.jsx` → Scripts folder
+* `.aia` → Actions panel
+
+**Run:**
+👉 Actions panel → ▶ Play
+
+---
+
+# 🔗 Workflow Logic
+
+```
+1 → 2 → 3 → 4 → 5 → 6
+```
+
+👉 সব step connected
+👉 একটার output next step use করে
+
+---
+
+# 📁 Folder Structure
+
+```
 Pattern Template Making Script and Action/
 │
 ├── Arrow Mark/
@@ -144,10 +182,24 @@ Pattern Template Making Script and Action/
 ├── Pattern Alline Action/
 ├── Size Script/
 └── Template Script Nest Pattern/
-📌 Notes
-All scripts are designed for Adobe Illustrator
-Some actions (.aia) must be loaded into Actions Panel
-Ensure correct selection before running scripts
-📬 Contact
+```
 
-Telegram: @mostafizarfiz
+---
+
+# ⚠️ Important Notes
+
+* Illustrator restart না করলে script detect করবে না
+* Scripts manually run করার দরকার নাই
+* সব action থেকেই trigger হবে
+* Object select থাকা লাগবে
+
+---
+
+# 📬 Contact
+
+Telegram: **@mostafizarfiz**
+
+---
+
+If you want next level polish:
+আমি এটাকে **premium GitHub repo style (badges + icons + UI preview sections)** বানিয়ে দিতে পারি 👍
