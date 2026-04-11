@@ -91,7 +91,7 @@ C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
 
 **Preview:**
 
-![Template Script](./Template%20Script%20Nest%20Pattern/template.gif)
+![Template Script](./Template%20Script%20Nest%20Pattern/Template%20Script%20Nest%20Pattern.gif)
 
 **Run:**
 👉 Actions Panel → ▶ Play
@@ -117,7 +117,7 @@ C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
 
 **Preview:**
 
-![Creat Design and Arrow Mark](./Creat%20Design%20and%20set%20auto.gif)
+![Final Design](./Creat%20Design%20and%20Arro%20Mark/Creat%20Design%20and%20set%20auto.gif)
 
 
 **Run:**
