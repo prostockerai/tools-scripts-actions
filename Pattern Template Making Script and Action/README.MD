@@ -1,7 +1,3 @@
-Perfect — নিচে আমি তোমাকে **final GitHub README preview style** দেখাচ্ছি (exact যেটা তুমি চাইছো)।
-এটা copy করলে সরাসরি GitHub-এ সুন্দরভাবে render হবে 👇
-
----
 
 # 📦 Illustrator Pattern Template Scripts
 
@@ -113,15 +109,14 @@ C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
 
 ## 6️⃣ Creat Design and Arrow Mark
 
-📁 Folder: `Creat Design and Arro Mark/`
+📁 Folder: `Creat Design and Arrro Mark/`
 
 **Preview:**
 
-![Creat Design and Arro Mark](./Creat%20Design%20and%20Arro%20Mark/Creat%20Design%20and%20set%20auto.gif)
-
+![Final Design](./Creat%20Design%20and%20Arrro%20Mark/Creat%20Design%20and%20set%20auto.gif)
 
 **Run:**
-👉 Actions Panel → ▶ Play
+👉 Actions Panel → ▶ Play  
 
 ---
 
