@@ -117,7 +117,7 @@ C:\Program Files\Adobe\Adobe Illustrator [version]\Presets\en_GB\Scripts
 
 **Preview:**
 
-![Final Design](./Creat%20Design%20and%20Arro%20Mark/Creat%20Design%20and%20set%20auto.gif)
+![Creat Design and Arro Mark](./Creat%20Design%20and%20Arro%20Mark/Creat%20Design%20and%20set%20auto.gif)
 
 
 **Run:**
