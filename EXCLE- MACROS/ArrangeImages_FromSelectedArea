@@ -1,0 +1,85 @@
+Sub ArrangeImages_FromSelectedArea()
+
+    Dim ws As Worksheet
+    Set ws = ActiveSheet
+
+    Dim shp As Shape
+    Dim i As Long: i = 0
+
+    ' Input size
+    Dim userW As Double, userH As Double
+    userW = Val(InputBox("Enter Width (exact):", "Width", 120))
+    userH = Val(InputBox("Enter Height (exact):", "Height", 140))
+
+    If userW = 0 Or userH = 0 Then
+        MsgBox "Width and Height must be given"
+        Exit Sub
+    End If
+
+    ' Gap
+    Dim gapX As Double: gapX = 0
+    Dim gapY As Double: gapY = 0
+
+    ' Selected cell area
+    Dim selRange As Range
+    Set selRange = Selection
+
+    Dim startX As Double, startY As Double
+    startX = selRange.Left
+    startY = selRange.Top
+
+    Dim currentX As Double, currentY As Double
+    currentX = startX
+    currentY = startY
+
+    ' Group storage
+    Dim grpShapes(1 To 4) As Variant
+    Dim grpIndex As Integer: grpIndex = 0
+
+    ' 🔥 Loop all shapes but filter by position
+    For Each shp In ws.Shapes
+
+        If shp.Type = msoPicture Then
+
+            ' ✅ Check if shape is INSIDE selected area
+            If shp.Left >= selRange.Left And _
+               shp.Top >= selRange.Top And _
+               shp.Left <= selRange.Left + selRange.Width And _
+               shp.Top <= selRange.Top + selRange.Height Then
+
+                ' Resize
+                shp.LockAspectRatio = msoFalse
+                shp.Width = userW
+                shp.Height = userH
+
+                ' Position
+                shp.Left = currentX
+                shp.Top = currentY
+
+                ' Store for grouping
+                grpIndex = grpIndex + 1
+                Set grpShapes(grpIndex) = shp
+
+                i = i + 1
+                currentX = currentX + userW + gapX
+
+                If i Mod 4 = 0 Then
+                    
+                    ws.Shapes.Range(Array( _
+                        grpShapes(1).Name, _
+                        grpShapes(2).Name, _
+                        grpShapes(3).Name, _
+                        grpShapes(4).Name)).Group
+                    
+                    grpIndex = 0
+                    currentX = startX
+                    currentY = currentY + userH + gapY
+                End If
+
+            End If
+
+        End If
+
+    Next shp
+
+End Sub
